@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            display: grid;
+            place-items: center;
+        }
+    </style>
+</head>
+
+<body>
+    <button id="chatButton">Chat with Us</button>
+
+    <script>
+        const chatButton = document.getElementById('chatButton');
+
+        chatButton.addEventListener('click', function () {
+            const phoneNumber = '9959283476';
+            const prefilledMessage = 'Hi! I want to apply for insurance.';
+            const encodedMessage = encodeURIComponent(prefilledMessage);
+
+            const link = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
+            window.location.href = link;
+        });
+
+    </script>
+</body>
+
+</html>
